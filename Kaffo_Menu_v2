@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            golden:"#C08457",
+            beige:"#F9F2E2",
+            brown:"#5F4B44"
+          }
+        }
+    }
+}
+
+</script>
+<script>
+    function showMenu(menuType) {
+        // Hide all food divs
+        const foodDivs = document.querySelectorAll('.menu');
+        foodDivs.forEach(div => div.classList.add('hidden'));
+
+        // Show the selected food div
+        const selectedDiv = document.getElementById(menuType);
+        selectedDiv.classList.remove('hidden');
+    }
+</script>
+  <title>The Kafo</title>
+</head>
+<body>
+<div class="relative">
+    <div class="h-screen bg-cover bg-center" style="background-image: url('Kaffo/KaffoBG-3.png');"> 
+
+    
+    <nav>
+        <div class="lg:flex justify-center items-center">
+            <img src="Kaffo/kafologo.png" class=" lg:w-96 lg:px-32 sm:w-fit py-8 object-cover"></img>
+            <div class="container grid lg:grid-rows-2 mx-auto justify-end">
+                <div class="flex lg:flex-row justify-end items-center gap-14 py-4">
+                    <div>
+                        <button class="w-auto border-r-2 border-beige"><img src="Kaffo/Facebook.png"></img></button>
+                        <button class="w-auto "><img src="Kaffo/Instalogo.png"></img></button>
+                    </div>
+                    <input class="w-auto py-2 px-4 bg-beige rounded-xl focus:outline-none" type="search" placeholder="Arama Yap"/>
+                    <div>
+                        <ul class="flex flex-row justify-end px-32">
+                            <li><a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3">TR</a></li>
+                            <li>
+                                <a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3">EN</a>
+                            </li>
+                            <li>
+                                <a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3">FR</a>
+                            </li>
+                            <li class="pl-2">
+                                <a href="https://www.google.com.tr/" class="text-beige">ISP</a>
+                            </li>
+                        </ul>
+                      
+                      
+                      
+                      
+                    </div>
+                    </div>
+                    <ul class="flex lg:flex-row justify-center items-center gap-16 px-32">
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Ana Sayfamiz</a>
+                        </li>
+                        <li class="flex justify-center">
+                            <a href="https://www.google.com.tr/" class="text-beige  text-xl">Subelerimiz</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige border-t-2 border-b-2 border-beige text-xl">Menü</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Kahve ve Biz</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Kariyer</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Iletisim</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+</div>
+<div class="bg-white justify-center items-center  text-brown font-bold text-5xl 2xl:px-64 lg:px-32 lg:pt-32">
+    <p class="max-w-lg border-b-2  border-brown pb-4 font-bold">KAHVE MAĞAZAMIZA HOŞ GELDİNİZ!</p>
+</div>
+    <div class="pt-16">
+    <ul class="lg:flex lg:flex-row justify-center items-center gap-16 px-32 sm:grid sm:grid-cols-2">
+        <li><img src="Kaffo/Arrow.png" class="lg:w-48 pb-40"></li>
+        <li>
+            <button class="bg-brown rounded-3xl size-48 flex flex-col justify-center items-center drop-shadow-xl text-4xl text-beige gap-4 hover:bg-brown hover:duration-300" onclick="showMenu('Kahveler')">
+                <img src="Kaffo/Coffee.png">
+                <p class=>Kahveler</p>
+            </button>
+        </li>
+        <li>
+            
+            <button class="bg-golden rounded-3xl size-48 flex flex-col justify-center items-center drop-shadow-xl text-4xl text-beige gap-4 hover:bg-brown hover:duration-300" onclick="showMenu('Salatalar')">
+                <img src="Kaffo/catal.png">
+                <p class=>Salatalar</p>
+            </button>
+        
+        </li>
+        <li>
+            
+            <button class="bg-golden rounded-3xl size-48 flex flex-col justify-center items-center drop-shadow-xl text-4xl text-beige gap-4 hover:bg-brown hover:duration-300" onclick="showMenu('Tatlilar')">
+                <img src="Kaffo/kuruvasan.png">
+                <p class=>Tatlılar</p>
+            </button>
+            
+        </li>
+        <li>
+           
+            <button class="bg-golden rounded-3xl size-48 flex flex-col justify-center items-center drop-shadow-xl text-4xl text-beige gap-4 hover:bg-brown hover:duration-300" onclick="showMenu('Icecekler')">
+                <img src="Kaffo/takeaway.png">
+                <p class=>İçecekler</p>
+            </button>
+        
+        </li>
+        </ul>
+</div>
+<div id= "Kahveler" class="flex flex-col justify-center items-center gap-16 py-16 menu">
+    <div class="flex flex-row justify-center items-center gap-16 px-32">
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu1.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center ">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu2.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu3.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="flex flex-row justify-center items-center gap-16 px-32">
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu4.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu5.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu6.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="flex flex-row justify-center items-center gap-16 px-32">
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu7.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu8.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu9.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="flex flex-row justify-center items-center gap-16 px-32">
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu10.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu11.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu12.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="flex flex-row justify-center items-center gap-16 px-32">
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu13.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu14.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/menu15.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div id= "Salatalar" class="flex flex-col justify-center items-center gap-16 py-16 menu hidden">
+    <div class="flex flex-row justify-center items-center gap-16 px-32">
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/salata1.jfif" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/salata2.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/salata3.jpg" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="flex flex-row justify-center items-center gap-16 px-32">
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/salata4.webp" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/salata5.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+        <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+            <img src="Kaffo/salata6.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+            <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                 <p class=>Caramel Latte</p>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <div id= "Tatlilar" class="flex flex-col justify-center items-center gap-16 py-16 menu hidden">
+        <div class="flex flex-row justify-center items-center gap-16 px-32">
+            <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                <img src="Kaffo/tatlı1.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                     <p class=>Caramel Latte</p>
+                </div>
+                
+            </div>
+            <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                <img src="Kaffo/tatlı2.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                     <p class=>Caramel Latte</p>
+                </div>
+                
+            </div>
+            <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                <img src="Kaffo/tatlı3.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                     <p class=>Caramel Latte</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="flex flex-row justify-center items-center gap-16 px-32">
+            <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                <img src="Kaffo/tatlı4.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                     <p class=>Caramel Latte</p>
+                </div>
+                
+            </div>
+            <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                <img src="Kaffo/tatlı5.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                     <p class=>Caramel Latte</p>
+                </div>
+                
+            </div>
+            <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                <img src="Kaffo/tatlı6.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                     <p class=>Caramel Latte</p>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+        <div id= "Icecekler" class="flex flex-col justify-center items-center gap-16 py-16 menu hidden">
+            <div class="flex flex-row justify-center items-center gap-16 px-32">
+                <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                    <img src="Kaffo/icecek1.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                    <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                         <p class=>Caramel Latte</p>
+                    </div>
+                    
+                </div>
+                <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                    <img src="Kaffo/icecek2.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                    <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                         <p class=>Caramel Latte</p>
+                    </div>
+                    
+                </div>
+                <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                    <img src="Kaffo/icecek3.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                    <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                         <p class=>Caramel Latte</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="flex flex-row justify-center items-center gap-16 px-32">
+                <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                    <img src="Kaffo/icecek4.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                    <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                         <p class=>Caramel Latte</p>
+                    </div>
+                    
+                </div>
+                <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                    <img src="Kaffo/icecek5.jpg" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                    <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                         <p class=>Caramel Latte</p>
+                    </div>
+                    
+                </div>
+                <div class="flex flex-col drop-shadow-xl rounded-3xl w-60 h-72">
+                    <img src="Kaffo/icecek6.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                    <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-10 rounded-b-3xl flex flex-row gap-4 text-lg text-beige justify-center items-center">
+                         <p class=>Caramel Latte</p>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+<div class="flex flex-row bg-beige justify-start items-start">
+    <div class="bg-brown flex flex-col justify-center items-center xl:px-32 gap-12">
+        <img src="Kaffo/kafologo.png" class="w-48 py-8">
+        <div class="flex flex-row gap-4">
+            <button class="w-auto"><img src="Kaffo/Facebook.png"></img></button>
+            <div class="border-r-2 border-beige"></div>
+            <button class="w-auto "><img src="Kaffo/Instalogo.png"></img></button>
+        </div>
+        <p class="text-white text-md justify-center">Copyright 2023. Tüm hakları saklıdır</p>
+    </div>
+
+<div class="flex flex-row items-start gap-32 xl:px-16 w-full text-brown ">
+        
+        <div>
+         <ul class="flex flex-col justify-start items-start gap-4">
+            <li class="text-2xl border-b-2 border-brown justify-center items-center xl:pt-8 xl:pb-2">BİZE ULAŞIN</li>
+            <li class="flex flex-row justify-start items-start gap-4 xl:pt-4"><img src="Kaffo/locationbrown.png"><p>Osman Örek Cd, Lefkoşa 99010</p></li>
+            <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/alo.png"><p>548 999 333 29 92</p></li>
+            <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/message.png"><p>info@thekaffo.com</p></li>
+         </ul>
+        </div>
+        <div>
+            <ul class="flex flex-col justify-start items-start gap-4">
+               <li class="text-2xl border-b-2 border-brown justify-center items-center xl:pt-8 xl:pb-2">MENÜ</li>
+               <li class="flex flex-row justify-start items-start gap-4 xl:pt-4"><img src="Kaffo/Vector.png"><p>Kahveler</p></li>
+               <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/Vector.png"><p>Salatalar</p></li>
+               <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/Vector.png"><p>Tatlılar</p></li>
+               <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/Vector.png"><p>İçecekler</p></li>
+            </ul>
+           </div>
+           <div class="flex flex-row items-start gap-16 xl:px-16 w-full xl:lvh">
+        
+            <div>
+             <ul class="flex flex-col justify-start items-start gap-4">
+                <li class="text-2xl border-b-2 border-brown justify-center items-center xl:pt-8 xl:pb-2">E-BÜLTEN</li>
+                <li class="max-w-64 text-lg"><p>Yeniliklerden haberdar olmak için e-posta listemize kayıt olun.</p></li>
+                <li><input class="w-auto py-2 px-4 bg-brown rounded-xl text-beige focus:outline-none" type="search" placeholder="E-Posta Adresinizi Giriniz"/></li>
+                <li>Gizliliğe Önem Veriyoruz</li>
+             </ul>
+            </div>
+</div>
+
+</div>
+</body>
+</html>
