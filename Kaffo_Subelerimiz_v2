@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            golden:"#C08457",
+            beige:"#F9F2E2",
+            brown:"#5F4B44"
+          }
+        }
+    }
+}
+</script>
+  <title>The Kafo Şubelerimiz</title>
+</head>
+<body>
+<div class="relative">
+    <div class="h-screen bg-cover bg-center" style="background-image: url('Kaffo/Kaff-BG2.png');">
+
+    
+    <nav>
+        <div class="lg:flex justify-center items-center">
+            <img src="Kaffo/kafologo.png" class=" lg:w-96 lg:px-32 sm:w-fit py-8 object-cover"></img>
+            <div class="container grid lg:grid-rows-2 mx-auto justify-end">
+                <div class="flex lg:flex-row justify-end items-center gap-14 py-4">
+                    <div>
+                        <button class="w-auto border-r-2 border-beige"><img src="Kaffo/Facebook.png"></img></button>
+                        <button class="w-auto "><img src="Kaffo/Instalogo.png"></img></button>
+                    </div>
+                    <input class="w-auto py-2 px-4 bg-beige rounded-xl focus:outline-none" type="search" placeholder="Arama Yap"/>
+                    <div>
+                        <ul class="flex flex-row justify-end px-32">
+                            <li><a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3">TR</a></li>
+                            <li>
+                                <a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3">EN</a>
+                            </li>
+                            <li>
+                                <a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3">FR</a>
+                            </li>
+                            <li class="pl-2">
+                                <a href="https://www.google.com.tr/" class="text-beige">ISP</a>
+                            </li>
+                        </ul>
+                      
+                      
+                      
+                      
+                    </div>
+                    </div>
+                    <ul class="flex lg:flex-row justify-center items-center gap-16 px-32">
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige  border-beige text-xl">Ana Sayfamiz</a>
+                        </li>
+                        <li class="flex justify-center">
+                            <a href="https://www.google.com.tr/" class="text-beige border-t-2 border-b-2 border-beige text-xl">Subelerimiz</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Menu</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Kahve ve Biz</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Kariyer</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com.tr/" class="text-beige text-xl">Iletisim</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+</div>
+<div class="bg-white justify-center items-center  text-brown font-bold text-5xl 2xl:px-64 lg:px-32 lg:pt-32">
+    <p class="max-w-lg border-b-2  border-brown pb-4 font-bold">ŞUBELERİMİZ</p>
+</div>
+    <div class="pt-16 size-lg">
+    <ul class="lg:flex lg:flex-row justify-center items-center gap-16 px-32 sm:grid sm:grid-cols-2 pb-48">
+        <li><img src="Kaffo/Arrow.png" class="lg:w-48 pb-96"></li>
+        <li><div class="flex flex-col gap-16 jusitfy-center items-center">
+            <button class="flex flex-col drop-shadow-xl rounded-3xl w-sm h-80">
+                <img src="Kaffo/lokasyon1.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-24 rounded-b-3xl flex flex-col gap-2 text-lg text-beige">
+                    <div class=" flex flex-row gap-4 text-lg text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row gap-4 text-lg text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </button>
+            <button class="flex flex-col drop-shadow-xl rounded-3xl w-sm h-80">
+                <img src="Kaffo/lokasyon1.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-24 rounded-b-3xl flex flex-col gap-2 text-lg text-beige">
+                    <div class=" flex flex-row gap-4 text-lg text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row gap-4 text-lg text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </button>
+        
+
+
+        </div></li>
+
+        <li><div class="flex flex-col gap-16 jusitfy-center items-center">
+            <button class="flex flex-col drop-shadow-xl rounded-3xl w-sm h-80">
+                <img src="Kaffo/lokasyon1.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-24 rounded-b-3xl flex flex-col gap-2 text-lg text-beige">
+                    <div class=" flex flex-row gap-4 text-lg text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row gap-4 text-lg text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </button>
+            <button class="flex flex-col drop-shadow-xl rounded-3xl w-sm h-80">
+                <img src="Kaffo/lokasyon1.png" class="z-20 hover:z-0 w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full h-24 rounded-b-3xl flex flex-col gap-2 text-lg text-beige">
+                    <div class=" flex flex-row gap-4 text-lg text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row gap-4 text-lg text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </button>
+
+
+        </div></li>
+    
+</ul>
+</div>
+<div class="bg-brown px-32 bg-no-repeat" style="background-image: url(Kaffo/Group.png);">
+    <ul class="flex flex-col justify-end items-end xl:p-16 gap-14">
+    <li><p class="text-4xl font-bold text-beige max-w-lg border-b-2 border-beige pb-4">MOBİL UYGULAMAMIZI İNDİRİN</p></li>
+    <li><p class="text-xl text-beige max-w-lg">Mobil uygulamamıza özel kampanyalardan yararlanabilmek için uygulamamızı indirin.</p></li>
+    <li><div class="flex flex-row justify-start items-start gap-4 xl:pr-36">
+     <button class="w-44 h-14 bg-no-repeat" style="background-image: url(Kaffo/buton1.png);"></button>
+     <button class="w-44 h-14 bg-no-repeat" style="background-image: url(Kaffo/buton2.png);"></button>
+    </div>
+    </li>
+    <ul class="flex flex-row gap-8 justify-center items-center">
+        <li><p class="text-2xl text-beige max-w-48">Uygulamamızı QR kod ile hemen indirin.</p></li>
+        <li><img src="Kaffo/QR.png" class="w-48 rounded-3xl"></li>
+    </ul>
+    <ul class="flex flex-row gap-8 justify-center items-center">
+        <li><img src="Kaffo/image 18.png" class="w-48 rounded-3xl"></li>
+        <li><p class="text-2xl text-beige max-w-48">10. İçeceğiniz Bizden</p></li>
+    </ul>
+    </ul>
+</div>
+<div class="flex flex-row bg-white justify-center items-center">
+    <div class="flex flex-col gap-16">
+        <p class="text-5xl font-bold text-brown max-w-xl">ANILARIMIZ</p>
+        <div class="border-b-2 border-brown"></div>
+        <p class="text-xl font-semibold text-brown max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <img src="Kaffo/Arrow3.png" class="lg:pl-36">
+    <div class="flex flex-col lg:p-32 gap-8">
+        <ul class="lg:flex lg:flex-row justify-center items-center gap-8">
+            <li><img src="Kaffo/coffee1.png" class="rounded-3xl"></li>
+            <li><img src="Kaffo/coffee2.png" class="rounded-3xl"></li>
+        </ul>
+        <ul class="lg:flex lg:flex-row justify-center items-center gap-8">
+            <li><img src="Kaffo/coffee3.png" class="rounded-3xl"></li>
+            <li><img src="Kaffo/coffee4.png" class="rounded-3xl"></li>
+        </ul>
+    </div>
+</div>
+<div class="flex flex-row bg-beige justify-start items-start">
+    <div class="bg-brown flex flex-col justify-center items-center xl:px-32 gap-12">
+        <img src="Kaffo/kafologo.png" class="w-48 py-8">
+        <div class="flex flex-row gap-4">
+            <button class="w-auto"><img src="Kaffo/Facebook.png"></img></button>
+            <div class="border-r-2 border-beige"></div>
+            <button class="w-auto "><img src="Kaffo/Instalogo.png"></img></button>
+        </div>
+        <p class="text-white text-md justify-center">Copyright 2023. Tüm hakları saklıdır</p>
+    </div>
+
+<div class="flex flex-row items-start gap-32 xl:px-16 w-full text-brown ">
+        
+        <div>
+         <ul class="flex flex-col justify-start items-start gap-4">
+            <li class="text-2xl border-b-2 border-brown justify-center items-center xl:pt-8 xl:pb-2">BİZE ULAŞIN</li>
+            <li class="flex flex-row justify-start items-start gap-4 xl:pt-4"><img src="Kaffo/locationbrown.png"><p>Osman Örek Cd, Lefkoşa 99010</p></li>
+            <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/alo.png"><p>548 999 333 29 92</p></li>
+            <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/message.png"><p>info@thekaffo.com</p></li>
+         </ul>
+        </div>
+        <div>
+            <ul class="flex flex-col justify-start items-start gap-4">
+               <li class="text-2xl border-b-2 border-brown justify-center items-center xl:pt-8 xl:pb-2">MENÜ</li>
+               <li class="flex flex-row justify-start items-start gap-4 xl:pt-4"><img src="Kaffo/Vector.png"><p>Kahveler</p></li>
+               <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/Vector.png"><p>Salatalar</p></li>
+               <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/Vector.png"><p>Tatlılar</p></li>
+               <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/Vector.png"><p>İçecekler</p></li>
+            </ul>
+           </div>
+           <div class="flex flex-row items-start gap-16 xl:px-16 w-full xl:lvh">
+        
+            <div>
+             <ul class="flex flex-col justify-start items-start gap-4">
+                <li class="text-2xl border-b-2 border-brown justify-center items-center xl:pt-8 xl:pb-2">E-BÜLTEN</li>
+                <li class="max-w-64 text-lg"><p>Yeniliklerden haberdar olmak için e-posta listemize kayıt olun.</p></li>
+                <li><input class="w-auto py-2 px-4 bg-brown rounded-xl text-beige focus:outline-none" type="search" placeholder="E-Posta Adresinizi Giriniz"/></li>
+                <li>Gizliliğe Önem Veriyoruz</li>
+             </ul>
+            </div>
+</div>
+
+</div>
+</body>
+</html>
