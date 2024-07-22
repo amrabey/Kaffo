@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.0/flowbite.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+      'sm': '310px',
+      // => @media (min-width: 576px) { ... }
+
+      'md': '500px',
+      // => @media (min-width: 960px) { ... }
+
+      'lg': '1250px',
+      // => @media (min-width: 1440px) { ... }
+    },
+  
+
+
+        extend: {
+          colors: {
+            golden:"#C08457",
+            beige:"#F9F2E2",
+            brown:"#5F4B44"
+          }
+        
+        }
+    }
+}
+</script>
+<script>
+   function toggleDropdown() {
+    var dropdownMenu = document.getElementById('dropdownMenu');
+    var dropdownMenu2 = document.getElementById('dropdownMenu2');
+
+    // Toggle the visibility of the first dropdown
+    dropdownMenu.classList.toggle('hidden');
+
+    // If the second dropdown is visible, hide it
+    if (!dropdownMenu2.classList.contains('hidden')) {
+        dropdownMenu2.classList.add('hidden');
+    }
+}
+
+function toggleDropdown2() {
+    var dropdownMenu = document.getElementById('dropdownMenu');
+    var dropdownMenu2 = document.getElementById('dropdownMenu2');
+
+    // Toggle the visibility of the second dropdown
+    dropdownMenu2.classList.toggle('hidden');
+
+    // If the first dropdown is visible, hide it
+    if (!dropdownMenu.classList.contains('hidden')) {
+        dropdownMenu.classList.add('hidden');
+    }
+}
+    
+    function togglesearchbar() {
+        document.getElementById('searchbar').classList.toggle('hidden');
+    }
+</script>
+
+<style>
+    /* Custom CSS for the hover effect */
+    .hover-border::before,
+    .hover-border::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: currentColor;
+        transition: width 0.3s ease;
+    }
+  
+    .hover-border::before {
+        top: 0;
+        right: 0;
+    }
+  
+    .hover-border::after {
+        bottom: 0;
+        right: 0;
+    }
+  
+    .hover-border:hover::before,
+    .hover-border:hover::after {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const nextButton = document.getElementById('carouselNext');
+        const prevButton = document.getElementById('carouselPrev');
+        
+        const disableButtonTemporarily = (button) => {
+            button.disabled = true;
+            setTimeout(() => {
+                button.disabled = false;
+            }, 750);
+        };
+
+        nextButton.addEventListener('click', () => {
+            
+            disableButtonTemporarily(nextButton);
+        });
+
+        prevButton.addEventListener('click', () => {
+    
+            disableButtonTemporarily(prevButton);
+        });
+
+
+    });
+</script>
+
+  <title>The Kafo</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.0/flowbite.min.js"></script>
+<!-- Background Carousel for Navigation Part-->
+
+    <div class="relative">
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative lg:h-screen overflow-hidden rounded-lg sm:h-96">
+             <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="Kaffo/KaffoBG.png" class="absolute block w-full object-cover lg:h-screen sm:h-96 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="Kaffo/KaffoBG-2.png" class="absolute block w-full object-cover lg:h-screen sm:h-96 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="Kaffo/KaffoBG-3.png" class="absolute block w-full object-cover lg:h-screen sm:h-96 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="Kaffo/KaffoBG-4.png" class="absolute block w-full object-cover lg:h-screen sm:h-96  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="Kaffo/KaffoBG-5.png" class="absolute block w-full object-cover lg:h-screen sm:h-96 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 6 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="Kaffo/KaffoBG-6.png" class="absolute block w-full object-cover lg:h-screen sm:h-96 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+        </div>
+        <button id="carouselNext" type="button" class="absolute top-0  start-16 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none lg:block sm:hidden" data-carousel-prev>
+            <span><img src="Kaffo/carousel-1.png" class="w-16 sm:hidden lg:block"></span>
+                <span class="sr-only">Previous</span>
+           
+        </button>
+        <button id="carouselPrev" type="button" class="absolute top-0 end-16 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none lg:block sm:hidden" data-carousel-next>
+            <span><img src="Kaffo/carousel-2.png" class="w-16 sm:hidden lg:block"></span>
+                <span class="sr-only">Next</span>
+        
+        </button>
+    </div>
+       
+    <nav>
+        <div class="flex flex-row justify-center items-center absolute inset-x-0 top-0">
+            <img src="./Kaffo/kafologo.png" class="lg:w-96 lg:px-32 sm:w-fit md:w-fit sm:px-2 md:px-4 lg:py-8 sm:py-2 md:py-4 object-cover z-30" alt="Kaffo Logo">
+    
+            <div class="container grid lg:grid-rows-2 mx-auto justify-end ">
+                <div class="z-30 flex flex-row justify-end items-center  lg:gap-14 sm:gap-2 py-4">
+                    <div class="lg:block sm:hidden md:block">
+                        <button class="size-10 border-r-2 border-beige">
+                            <img src="Kaffo/Facebook.png" class="w-8 h-8" alt="Facebook">
+                        </button>
+                        <button class="size-10 ">
+                            <img src="Kaffo/Instalogo.png" class="w-8 h-8" alt="Instagram">
+                        </button>
+                    </div>
+    
+                    <div class="lg:block sm:hidden ">
+                        <input class="w-auto py-2 px-4 bg-beige rounded-xl focus:outline-none placeholder:text-brown" type="search" placeholder="Arama Yap">
+                    </div>
+    
+                    <div class="lg:hidden sm:block ">
+                        
+                        <input class="sm:w-32 md:w-auto py-2 px-4 bg-beige rounded-xl focus:outline-none placeholder:text-brown" type="search" placeholder="Arama Yap">
+                        
+                    
+                    </div>
+    
+                    <div class="lg:hidden sm:block flex flex-row gap-4 mr-4">
+                        <div class=" inline-block text-left">
+                            <button onclick="toggleDropdown()" class="focus:outline-none">
+                                <img src="Kaffo/language.png" alt="Dropdown Icon" class="size-6">
+                            </button>
+                            <div id="dropdownMenu" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-golden ring-1 ring-black ring-opacity-5 hidden">
+                                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                    <a href="https://www.example1.com" class="block bg-golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">TR</a>
+                                    <a href="https://www.example1.com" class="block bg-golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">ENG</a>
+                                    <a href="https://www.example1.com" class="block bg-golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">FR</a>
+                                    <a href="https://www.example1.com" class="block bg-golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">ISP</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class=" inline-block text-left">
+                            <button onclick="toggleDropdown2()" class="focus:outline-none">
+                                <img src="Kaffo/threeline.png" alt="Dropdown Icon" class="size-6">
+                            </button>
+                            <div id="dropdownMenu2" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-golden ring-1 ring-black ring-opacity-5 hidden">
+                                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                                    <a href="TheKaffo.html" class="block bg:golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">Ana Sayfa</a>
+                                    <p class="block bg:golden px-4 py-2 text-sm text-beige bg-brown" role="menuitem">Şubelerimiz</p>
+                                    <a href="TheKaffo_Menu.html" class="block bg:golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">Menü</a>
+                                    <a href="TheKaffo_Kahvevebiz.html" class="block bg:golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">Kahve ve Biz</a>
+                                    <a href="TheKaffo_Kariyer.html" class="block bg:golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">Kariyer</a>
+                                    <a href="TheKaffo_Iletisim.html" class="block bg:golden px-4 py-2 text-sm text-beige hover:bg-brown hover:text-beige hover:duration-300" role="menuitem">İletişim</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="z-30 lg:block sm:hidden">
+                        <ul class="flex flex-row justify-end px-32">
+                            <li><a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3 hover:text-beige">TR</a></li>
+                            <li><a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3 hover:text-beige">EN</a></li>
+                            <li><a href="https://www.google.com.tr/" class="text-beige border-r-2 border-beige px-3 hover:text-beige">FR</a></li>
+                            <li class="pl-2"><a href="https://www.google.com.tr/" class="text-beige hover:text-beige">ISP</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="z-30 lg:block sm:hidden">
+                    <div class="flex lg:flex-row sm:flex-col md:flex-col justify-center items-center lg:gap-16 sm:gap-4 px-32">
+                        <a href="TheKaffo.html" class="relative text-beige text-xl hover:text-beige inline-block hover-border">Ana Sayfa</a>
+                        <p class="relative text-beige text-xl hover:text-beige inline-block border-y-2 border-beige">Şubelerimiz</p>
+                        <a href="TheKaffo_Menu.html" class="relative text-beige text-xl hover:text-beige inline-block hover-border">Menü</a>
+                        <a href="TheKaffo_Kahvevebiz.html" class="relative text-beige text-xl hover:text-beige inline-block hover-border">Kahve ve Biz</a>
+                        <a href="TheKaffo_Kariyer.html" class="relative text-beige text-xl hover:text-beige inline-block hover-border">Kariyer</a>
+                        <a href="TheKaffo_Iletisim.html" class="relative text-beige text-xl hover:text-beige inline-block hover-border">İletişim</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+        </div>
+    
+<div class="bg-white justify-center items-center  text-brown font-bold lg:text-5xl md:text-4xl sm:text-4xl 2xl:px-64 lg:px-32 md:px-24 sm:px-16 lg:pt-32 lg:mt-0 sm:mt-16">
+    <p class="max-w-lg border-b-2  border-brown pb-4 font-bold">ŞUBELERİMİZ</p>
+</div>
+    <div class="pt-16 size-lg">
+    <ul class="flex lg:flex-row sm:flex-col md:flex-row justify-center items-center lg:gap-12 md:gap-12 sm:gap-8 px-32 pb-48">
+        <li><img src="Kaffo/Arrow.png" class="lg:w-48 pb-96 lg:block sm:hidden md:hidden lg:mb-48"></li>
+        <li><div class="flex flex-col lg:gap-16 md:gap-12 sm:gap-8 jusitfy-center items-center">
+            <a href="TheKaffo_Iletisim.html" class="flex flex-col drop-shadow-xl rounded-3xl lg:w-96 lg:h-80 md:w-64 md:h-56 sm:w-56 sm:h-48 group hover:scale-110 hover:duration-300 ">
+                <img src="Kaffo/lokasyon1.png" class=" w-full h-full rounded-3xl ">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full lg:h-24 md:h-20 sm:h-20 rounded-b-3xl flex flex-col lg:gap-2 sm:gap-1 text-lg text-beige lg:opacity-0 md:opacity-100 sm:opacity-100 group-hover:opacity-100 group-hover:duration-300">
+                    <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige text-beige text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige text-beige text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="TheKaffo_Iletisim.html" class="flex flex-col drop-shadow-xl rounded-3xl lg:w-96 lg:h-80 md:w-64 md:h-56 sm:w-56 sm:h-48 group hover:scale-110 hover:duration-300">
+                <img src="Kaffo/lokasyon2.png" class="w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full lg:h-24 md:h-20 sm:h-20 rounded-b-3xl flex flex-col lg:gap-2 sm:gap-1 text-lg text-beige lg:opacity-0 md:opacity-100 sm:opacity-100 group-hover:opacity-100 group-hover:duration-300">
+                    <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </a>
+        
+
+
+        </div></li>
+
+        <li><div class="flex flex-col lg:gap-16 md:gap-12 sm:gap-8 jusitfy-center items-center">
+            <a href="TheKaffo_Iletisim.html" class="flex flex-col drop-shadow-xl rounded-3xl lg:w-96 lg:h-80 md:w-64 md:h-56 sm:w-56 sm:h-48 group hover:scale-110 hover:duration-300">
+                <img src="Kaffo/lokasyon3.png" class=" w-full h-full rounded-3xl ">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full lg:h-24 md:h-20 sm:h-20 rounded-b-3xl flex flex-col lg:gap-2 sm:gap-1 text-lg text-beige lg:opacity-0 md:opacity-100 sm:opacity-100 group-hover:opacity-100 group-hover:duration-300">
+                    <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </a>
+            <a href="TheKaffo_Iletisim.html" class="flex flex-col drop-shadow-xl rounded-3xl lg:w-96 lg:h-80 md:w-64 md:h-56 sm:w-56 sm:h-48 group hover:scale-110 hover:duration-300">
+                <img src="Kaffo/lokasyon4.png" class=" w-full h-full rounded-3xl">
+                <div class="absolute bottom-0 inset-x-0 bg-golden w-full lg:h-24 md:h-20 sm:h-20 rounded-b-3xl flex flex-col lg:gap-2 sm:gap-1 text-lg text-beige lg:opacity-0 md:opacity-100 sm:opacity-100 group-hover:opacity-100 group-hover:duration-300">
+                    <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige">
+                    <img src="Kaffo/location.png" class="p-2">
+                     <p>Yakın Doğu Üniversite Kampüsü</p>
+                    </div>
+                     <div class=" flex flex-row lg:gap-4 md:gap-2 sm:gap-1 lg:text-lg  md:text-md sm:text-sm text-beige text-beige text-beige">
+                     <img src="Kaffo/alo2.png" class="p-2">
+                      <p>548 999 333 29 92</p>
+                    </div>
+                </div>
+                
+            </a>
+
+
+        </div></li>
+    
+</ul>
+</div>
+<div class="bg-brown px-32 bg-no-repeat " style="background-image: url(Kaffo/Group.png);">
+    <ul class="flex flex-col justify-end items-end lg:p-16 gap-14">
+    <li><p class="lg:text-4xl sm:text-2xl font-bold text-beige max-w-lg border-b-2 border-beige lg:pb-4 sm:pb-4">MOBİL UYGULAMAMIZI İNDİRİN</p></li>
+    <li><p class="text-xl sm:text-beige lg:max-w-lg sm:max-w-xl">Mobil uygulamamıza özel kampanyalardan yararlanabilmek için uygulamamızı indirin.</p></li>
+    <li><div class="flex lg:flex-row sm:flex-col lg:justify-start lg:items-start sm:justify-center sm:items-center gap-4 lg:pr-36 sm:pr-0">
+     <button class="w-44 h-14 bg-no-repeat" style="background-image: url(Kaffo/buton1.png);"></button>
+     <button class="w-44 h-14 bg-no-repeat" style="background-image: url(Kaffo/buton2.png);"></button>
+    </div>
+    </li>
+    <ul class="flex lg:flex-row sm:flex-col gap-8 justify-center items-center">
+        <li><p class="lg:text-2xl sm:text-xl text-beige lg:max-w-48 sm:max-w-96">Uygulamamızı QR kod ile hemen indirin.</p></li>
+        <li><img src="Kaffo/QR.png" class="lg:w-48 sm:w-24 rounded-3xl"></li>
+    </ul>
+    <ul class="flex lg:flex-row sm:flex-col gap-8 justify-center items-center">
+        <li><img src="Kaffo/image 18.png" class="lg:w-48 sm-w-24 rounded-3xl"></li>
+        <li><p class="lg:text-2xl sm:text-xl text-beige lg:max-w-48 sm:max-w-96">10. İçeceğiniz Bizden</p></li>
+    </ul>
+    </ul>
+</div>
+<div id="default-carousel" class="relative w-full bg-white lg:h-[700px] md:h-[700px] sm:h-[700px]" data-carousel="slide">
+    <div class="relative lg:h-[1050px] md:h-[700px] sm:h-[700px] overflow-hidden">
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+<div class="flex lg:flex-row bg-white justify-center items-center sm:flex-col">
+    <div class="flex flex-col gap-8 lg:px-32 sm:px-16 md:px-16 sm:mt-8 md:mt-16 lg:mt-0">
+        <p class="lg:text-5xl sm:text-3xl font-bold text-brown max-w-xl ">ANILARIMIZ</p>
+        <div class="border-b-2 border-brown"></div>
+        <p class="text-xl font-semibold text-brown max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <img src="Kaffo/Arrow3.png" class="sm:hidden lg:block">
+    <div class="flex flex-col lg:py-32 lg:px-4 sm:p-8 gap-8 ">
+        <ul class="flex lg:flex-row sm:flex-row justify-center items-center gap-8">
+            <li><img src="Kaffo/coffee1.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+            <li><img src="Kaffo/coffee2.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+        </ul>
+        <ul class="flex lg:flex-row sm:flex-row justify-center items-center gap-8">
+            <li><img src="Kaffo/coffee3.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4 "></li>
+            <li><img src="Kaffo/coffee4.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+    <div class="flex lg:flex-row bg-white justify-center items-center sm:flex-col">
+        <div class="flex flex-col gap-8 lg:px-32 sm:px-16 md:px-16 sm:mt-8 md:mt-16 lg:mt-0">
+            <p class="lg:text-5xl sm:text-3xl font-bold text-brown max-w-xl ">ANILARIMIZ</p>
+            <div class="border-b-2 border-brown"></div>
+            <p class="text-xl font-semibold text-brown max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <img src="Kaffo/Arrow3.png" class="sm:hidden lg:block">
+        <div class="flex flex-col lg:py-32 lg:px-4 sm:p-8 gap-8 ">
+            <ul class="flex lg:flex-row sm:flex-row justify-center items-center gap-8">
+                <li><img src="Kaffo/coffee1.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+                <li><img src="Kaffo/coffee2.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+            </ul>
+            <ul class="flex lg:flex-row sm:flex-row justify-center items-center gap-8">
+                <li><img src="Kaffo/coffee3.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4 "></li>
+                <li><img src="Kaffo/coffee4.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+    <div class="flex lg:flex-row bg-white justify-center items-center sm:flex-col">
+        <div class="flex flex-col gap-8 lg:px-32 sm:px-16 md:px-16 sm:mt-8 md:mt-16 lg:mt-0">
+            <p class="lg:text-5xl sm:text-3xl font-bold text-brown max-w-xl ">ANILARIMIZ</p>
+            <div class="border-b-2 border-brown"></div>
+            <p class="text-xl font-semibold text-brown max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <img src="Kaffo/Arrow3.png" class="sm:hidden lg:block">
+        <div class="flex flex-col lg:py-32 lg:px-4 sm:p-8 gap-8 ">
+            <ul class="flex lg:flex-row sm:flex-row justify-center items-center gap-8">
+                <li><img src="Kaffo/coffee1.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+                <li><img src="Kaffo/coffee2.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+            </ul>
+            <ul class="flex lg:flex-row sm:flex-row justify-center items-center gap-8">
+                <li><img src="Kaffo/coffee3.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4 "></li>
+                <li><img src="Kaffo/coffee4.png" class="rounded-3xl sm:size-24 md:size-32 lg:size-40 lg:mb-0 sm:mb-4"></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-2 cursor-pointer group focus:outline-none lg:block sm:hidden" data-carousel-prev>
+        <span><img src="Kaffo/carousel2.png" class="w-8 sm:hidden lg:block mb-96"></span>
+        <span class="sr-only">Previous</span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-2 cursor-pointer group focus:outline-none lg:block sm:hidden" data-carousel-next>
+        <span><img src="Kaffo/carousel.png" class="w-8 sm:hidden lg:block mb-96"></span>
+        <span class="sr-only">Next</span>
+    </button>
+</div>
+</div>
+
+<div class="flex lg:flex-row sm:flex-col bg-beige justify-start items-start">
+    <div class="bg-brown flex flex-col justify-center items-center gap-12 lg:w-2/5 md:w-full sm:w-full p-4">
+        <img src="Kaffo/biggerkaffologo.png" class="size-64  ">
+        <div class="flex flex-row gap-4">
+            <a href="https://www.facebook.com/thekaffo/?locale=tr_TR" class="size-12"><img src="Kaffo/Facebook.png" class="size-12"></img></a>
+            <div class="border-r-2 border-beige"></div>
+            <a href="https://www.instagram.com/theka_ffo/ " class="size-12"><img src="Kaffo/Instalogo.png" class="size-12"></img></a>
+        </div>
+        <p class="text-beige text-sm justify-center">COPYRIGHT © 2023 THEKAFFO. TÜM HAKLARI SAKLIDIR.</p>
+    </div>
+
+<div class="flex lg:flex-row sm:flex-col md:flex-col items-start lg:gap-24 md:gap-16 sm:gap-16 lg:px-12 sm:px-4 lg:w-3/5 md:full sm:full text-brown ">
+        
+        <div class="flex lg:flex-row md:flex-row sm:flex-col lg:gap-24 sm:gap-16 md:gap-32">
+         <ul class="flex flex-col justify-start items-start gap-4 sm:mt-6 lg:mt-0">
+            <li class="lg:text-3xl sm:text-2xl border-b-2 border-brown justify-center items-center lg:pt-8 xl:pb-2">BİZE ULAŞIN</li>
+            <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/locationbrown.png" class="size-6 mt-2"><p class="lg:text-2xl sm:text-xl">Osman Örek Cd, Lefkoşa 99010</p></li>
+            <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/alo.png " class="size-6 mt-2"><p class="lg:text-2xl sm:text-xl">548 999 333 29 92</p></li>
+            <li class="flex flex-row justify-start items-start gap-4 "><img src="Kaffo/message.png" class="size-6 mt-2"><p class="lg:text-2xl sm:text-xl">info@thekaffo.com</p></li>
+         </ul>
+        
+            <div class="flex flex-col justify-start items-start gap-4">
+               <p class="lg:text-3xl sm:text-2xl  border-b-2 border-brown justify-center items-center lg:pt-8 lg:pb-2">MENÜ</p>
+               <a href="TheKaffo_Menu.html" class="flex flex-row justify-start items-start gap-2 lg:text-2xl sm:text-xl"><img src="Kaffo/Vector.png" class="mt-2">Kahveler</a>
+               <a href="TheKaffo_Menu.html" class="flex flex-row justify-start items-start gap-2 lg:text-2xl sm:text-xl"><img src="Kaffo/Vector.png" class="mt-2">Salatalar</a>
+               <a href="TheKaffo_Menu.html" class="flex flex-row justify-start items-start gap-2 lg:text-2xl sm:text-xl"><img src="Kaffo/Vector.png" class="mt-2">Tatlılar</a>
+               <a href="TheKaffo_Menu.html" class="flex flex-row justify-start items-start gap-2 lg:text-2xl sm:text-xl"><img src="Kaffo/Vector.png" class="mt-2">İçecekler</a>
+            </div>
+           </div>
+           <div class="flex flex-row items-start gap-16 lg:px-8 w-full xl:lvh">
+        
+            <div>
+             <div class="flex flex-col justify-start items-start gap-4 lg:mb-0 sm:mb-4">
+                <p class=" border-b-2 border-brown justify-center items-center lg:pt-8 xl:pb-2 lg:text-3xl sm:text-2xl">E-BÜLTEN</p>
+                <p class="max-w-64 text-lg lg:text-2xl sm:text-xl">Yeniliklerden haberdar olmak için e-posta listemize kayıt olun.</p>
+                <input class="w-auto py-2 px-4 bg-brown rounded-xl text-beige placeholder:text-beige" type="email" placeholder="E-Posta Adresinizi Giriniz"/>
+                <p class="lg:text-2xl sm:text-xl">Gizliliğe Önem Veriyoruz</p>
+                </div>
+            </div>
+</div>
+
+</div>
+</body>
+</html>
